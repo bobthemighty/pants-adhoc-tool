@@ -1,0 +1,19 @@
+[GLOBAL]
+pants_version = "2.18.1"
+
+backend_packages = [
+  "pants.backend.python",
+  "pants.backend.shell",
+  "pants.backend.experimental.adhoc",
+]
+
+[source]
+# The Python source root is the repo root. See https://www.pantsbuild.org/docs/source-roots.
+root_patterns = ["/"]
+
+[python]
+# The default interpreter compatibility for code in this repo. Individual targets can override
+#  this with the `compatibility` field. See
+#  https://www.pantsbuild.org/docs/python-interpreter-compatibility.
+interpreter_constraints = [">=3.9.16,<3.10"]
+pip_version = "23.0.1"
